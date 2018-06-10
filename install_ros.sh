@@ -17,7 +17,7 @@ sudo rosdep init
 rosdep update
 mkdir -p ~/ros_catkin_ws
 cd ~/ros_catkin_ws
-rosinstall_generator ros_comm --rosdistro kinetic --deps --wet-only --tar > kinetic-ros_comm-wet.rosinstall
+rosinstall_generator mobile --rosdistro kinetic --deps --wet-only --tar > kinetic-ros_comm-wet.rosinstall
 wstool init src kinetic-ros_comm-wet.rosinstall
 rosdep install -y --from-paths src --ignore-src --rosdistro kinetic -r --os=debian:stretch
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release -j2
